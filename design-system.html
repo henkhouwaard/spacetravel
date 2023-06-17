@@ -5,15 +5,24 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Design System</title>
     <link rel="stylesheet" href="style.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@400;700&family=Bellefair&family=Barlow:wght@400;700&display=swap"
+      rel="stylesheet"
+    />
   </head>
   <body>
-    <div class="container">
+    <div class="container flow">
       <h1>Design system</h1>
-      <section id="colors">
+      <section id="colors" class="flow">
         <h2><span>01</span> colors</h2>
         <div class="grid grid-col-3" style="--gap: 3rem">
-          <div>
-            <div style="padding: 3rem 1rem 1rem; border: 1px solid #616476">
+          <div class="flow" style="--flow: 0.5rem">
+            <div
+              class="ff-serif fs-500"
+              style="padding: 3rem 1rem 1rem; border: 1px solid #616476"
+            >
               #0B0D17
             </div>
             <p class="grid grid-col-2" style="--col2: 4fr">
@@ -25,8 +34,11 @@
               <span class="">230, 35%, 7%</span>
             </p>
           </div>
-          <div>
-            <div class="bg-accent text-dark" style="padding: 3rem 1rem 1rem">
+          <div class="flow">
+            <div
+              class="ff-serif fs-500 bg-accent text-dark"
+              style="padding: 3rem 1rem 1rem"
+            >
               #D0D6F9
             </div>
             <p class="grid grid-col-2" style="--col2: 4fr">
@@ -38,8 +50,11 @@
               <span class="">231, 77%, 90%</span>
             </p>
           </div>
-          <div>
-            <div class="text-dark bg-white" style="padding: 3rem 1rem 1rem">
+          <div class="flow">
+            <div
+              class="ff-serif fs-500 text-dark bg-white"
+              style="padding: 3rem 1rem 1rem"
+            >
               #FFFFFF
             </div>
             <p class="grid grid-col-2" style="--col2: 4fr">
