@@ -1,0 +1,97 @@
+/* custom properties */
+:root {
+  --clr-dark: 230 35% 7%;
+  --clr-accent: 231 77% 90%;
+  --clr-white: 0 100% 100%;
+}
+
+reset *,
+*::after,
+*::before {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  font: inherit;
+}
+
+body {
+  line-height: 1.5;
+  min-height: 100vh;
+  background: hsl(var(--clr-dark) / 1);
+  color: hsl(var(--clr-white));
+}
+
+img,
+picture {
+  max-width: 100%;
+  display: block;
+}
+
+/* utility */
+.flex {
+  display: flex;
+  gap: var(--gap, 1em);
+}
+
+.grid {
+  display: grid;
+  gap: var(--gap, 1em);
+}
+
+.container {
+  margin-inline: auto;
+  padding-inline: 2em;
+  max-width: 80rem;
+}
+
+.justify-center {
+  justify-content: center;
+}
+
+.align-center {
+  align-items: center;
+}
+
+.flex-item {
+  flex: var(--grow, 1) var(--shrink, 1) var(--base, auto);
+}
+
+.grid-col-2 {
+  grid-template-columns: var(--col1, 1fr) var(--col2, 1fr);
+}
+.grid-col-3 {
+  grid-template-columns: var(--col1, 1fr) var(--col2, 1fr) var(--col3, 1fr);
+}
+
+.box {
+  background-color: lightblue;
+  padding: 3rem;
+}
+
+/* colors */
+.bg-dark {
+  background: hsl(var(--clr-dark));
+}
+
+.bg-accent {
+  background: hsl(var(--clr-accent));
+}
+
+.bg-white {
+  background: hsl(var(--clr-white));
+}
+
+.text-dark {
+  color: hsl(var(--clr-dark));
+}
+.text-accent {
+  color: hsl(var(--clr-accent));
+}
+.text-white {
+  color: hsl(var(--clr-white));
+}
+
+/* components */
+.example-component {
+  background: hsl(var(--clr-accent) / 0.2);
+}
