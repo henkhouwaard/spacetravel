@@ -192,3 +192,60 @@ picture {
   font-weight: 700;
   margin-right: 0.5em;
 }
+
+.large-button {
+  display: grid;
+  position: relative;
+  z-index: 1;
+  padding: 0 2em;
+  aspect-ratio: 1;
+  align-items: center;
+  border-radius: 50%;
+  text-decoration: none;
+}
+
+.large-button::after {
+  content: "";
+  position: absolute;
+  background: hsl(var(--clr-white) / 0.25);
+  border-radius: 50%;
+  height: 100%;
+  width: 100%;
+  z-index: -1;
+  opacity: 0;
+  transition: opacity 1000ms ease-in-out, transform 500ms ease-in-out;
+}
+
+.large-button:hover::after {
+  opacity: 1;
+  transform: scale(1.5);
+}
+
+.primary-navigation {
+  --gap: 8rem;
+  --underline-gap: 2rem;
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.primary-navigation a {
+  text-decoration: none;
+}
+
+.primary-navigation span {
+  margin-right: 1rem;
+  font-weight: 700;
+}
+
+.underline-indicators > * {
+  padding: var(--underline-gap, 1rem) 0;
+  border-bottom: 0.2rem hsl(var(--clr-white) / 0) solid;
+}
+.underline-indicators > *.active {
+  border-color: hsl(var(--clr-white));
+}
+.underline-indicators > *:hover,
+.underline-indicators > *:focus {
+  border-color: hsl(var(--clr-white) / 0.25);
+}
